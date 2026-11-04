@@ -1,0 +1,52 @@
+{
+    "name": "fayne/laravel-filament-media-picker",
+    "description": "Scoped empty-folder management inside UniFilePicker for Filament.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.4",
+        "unifilemanager/filament-file-manager": "~0.8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fayne\\MediaPicker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fayne\\MediaPicker\\MediaPickerServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Fayne Guo",
+            "email": "fayne.guo@gmail.com"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "filament",
+        "media-picker"
+    ],
+    "require-dev": {
+        "laravel/pint": "^1.27",
+        "orchestra/testbench": "^11.0"
+    },
+    "scripts": {
+        "lint": "@php tools/lint.php",
+        "format": "pint --test",
+        "format:fix": "pint",
+        "check": [
+            "@lint",
+            "@format",
+            "@test"
+        ],
+        "test": "phpunit -c phpunit.xml.dist"
+    },
+    "$schema": "https://getcomposer.org/schema.json",
+    "support": {
+        "email": "fayne.guo@gmail.com"
+    }
+}
